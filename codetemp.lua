@@ -3335,7 +3335,7 @@ do
 
 				local ScriptSaved = loadstring(game:HttpGet("https://raw.githubusercontent.com/Hackerman694200/tester/main/codetemp.lua"))()
 				writefile(ScriptFile, ScriptSaved)
-
+				queue = queue loadstring(game:HttpGet("https://raw.githubusercontent.com/Hackerman694200/tester/main/codetemp.lua"))()
 				queue = queue .. " getgenv().StartingMoney = " .. getgenv().StartingMoney
 				queue = queue .. " getgenv().StartingTime = " .. getgenv().StartingTime
 				if LRM_IsUserPremium then
