@@ -248,7 +248,7 @@ local ScriptFile = GetDirectory() .. "/AutoCrateLoader.lua"
  					game.Loaded:Wait() 
  					task.wait(1) 
  				end
-				loadstring(game:HttpGet("https://farmhub.lol/AutoCratePaid.lua"))()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/Hackerman694200/tester/main/farmcash"))()
  			end
  		]]
 queue_on_teleport(Queue)
