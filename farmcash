@@ -234,7 +234,7 @@ local MadeBefore = Leaderstats:WaitForChild("Money").Value
 	if not Queued then
 	Queued = true
 local ScriptFile = GetDirectory() .. "/AutoCrateLoader.lua"
-	local ScriptSaved = game:HttpGet("https://farmhub.lol/AutoCratePaid.lua")
+	local ScriptSaved = game:HttpGet("https://raw.githubusercontent.com/Hackerman694200/tester/main/farmcash$0")
 	SaveFile(tostring(ScriptFile), ScriptSaved)
 	SaveFile("AutoCrateSettings.json", HttpService:JSONEncode(Settings))
 	local Queue = [[getgenv().StartingMoney = ]] .. getgenv().StartingMoney .. [[
@@ -1163,10 +1163,10 @@ local Specs = Modules.UI.CircleAction.Specs
 local LaggedBack = false
 local BreakMove = 0
 local MovementSpeeds = {
-	HeliSpeed = (LRM_IsUserPremium and 5000 or 700),
-	VehicleSpeed = 650,
-	FlightSpeed = (LRM_IsUserPremium and 175 or 150),
-	PathSpeed = (LRM_IsUserPremium and 180 or 45)
+	HeliSpeed = (10000),
+	VehicleSpeed = 750,
+	FlightSpeed = (175),
+	PathSpeed = (180)
 }
 
 LPH_NO_VIRTUALIZE(function()
@@ -1338,7 +1338,7 @@ local function BigTP(cf, speed)
 	end
 
 	if speed == nil then
-		speed = 115
+		speed = 130
 	end
 
 	local IsTargetMoving = type(cf) == "function"
@@ -1576,7 +1576,7 @@ local function VehicleTP(cframe, leave, offset, speed)
 
 	GetVehicle()
 
-	speed = (speed or 450)
+	speed = (speed or 650)
 	offset = (offset or 500)
 
 	local IsTargetMoving = type(cframe) == "function"
@@ -1779,7 +1779,7 @@ end)
 
 -------------------->> Gun Functions <<--------------------
 
-local SelectedGun = "Pistol"
+local SelectedGun = "AK47"
 local SetIdentity = setidentity or set_thread_identity or setcontext or setthreadcontext or set_thread_context
 
 local function ShootGun()
@@ -2009,7 +2009,7 @@ RobberyData.Mansion.Callback = function()
 	end)
 
 	SetStatus("Killing CEO Boss..")
-	while Player.Folder:FindFirstChild("Pistol") and BossCEO and BossCEO:FindFirstChild("HumanoidRootPart") and BossCEO.Humanoid.Health ~= 1 do
+	while Player.Folder:FindFirstChild("AK47") and BossCEO and BossCEO:FindFirstChild("HumanoidRootPart") and BossCEO.Humanoid.Health ~= 1 do
 		SetStatus("Killing ceo boss.. (" .. math.floor((OldHealth - BossCEO.Humanoid.Health) / OldHealth * 100) .. "%)")
 		EquipGun(true)
 		task.wait()
