@@ -381,13 +381,13 @@ local function GetGun()
 
 	repeat 
 		for i, v in next, Modules.GunShopUI.gui.Container.Container.Main.Container.Slider:GetChildren() do
-			if v:IsA("ImageLabel") and v.Name == "Pistol" and (v.Bottom.Action.Text == "FREE" or v.Bottom.Action.Text == "EQUIP") then
+			if v:IsA("ImageLabel") and v.Name == "AK47" and (v.Bottom.Action.Text == "FREE" or v.Bottom.Action.Text == "EQUIP") then
 				firesignal(v.Bottom.Action.MouseButton1Down)
 			end
 		end    
 
 		task.wait()
-	until player.Folder:FindFirstChild("Pistol")
+	until player.Folder:FindFirstChild("AK47")
 
 	pcall(Modules.GunShopUI.close)
 end
@@ -3096,9 +3096,9 @@ do
 				return BossCEO:FindFirstChild("Head")
 			end
 
-			while player.Folder:FindFirstChild("Pistol") and BossCEO and BossCEO:FindFirstChild("HumanoidRootPart") and BossCEO.Humanoid.Health ~= 1 do
-				require(Modules.EquipThing).AttemptSetEquipped({obj = game:GetService("Players").LocalPlayer.Folder["Pistol"]}, true)
-				player.Folder.Pistol.InventoryEquipRemote:FireServer(true)
+			while player.Folder:FindFirstChild("AK47") and BossCEO and BossCEO:FindFirstChild("HumanoidRootPart") and BossCEO.Humanoid.Health ~= 1 do
+				require(Modules.EquipThing).AttemptSetEquipped({obj = game:GetService("Players").LocalPlayer.Folder["AK47"]}, true)
+				player.Folder.AK47.InventoryEquipRemote:FireServer(true)
 				task.wait()
 				ShootGun()
 			end
@@ -3106,9 +3106,9 @@ do
 			root.CFrame = CFrame.new(root.CFrame.X, origY, root.CFrame.Z)
 			BV:Destroy()
 
-			require(Modules.EquipThing).AttemptSetEquipped({obj = game:GetService("Players").LocalPlayer.Folder["Pistol"]}, false)
+			require(Modules.EquipThing).AttemptSetEquipped({obj = game:GetService("Players").LocalPlayer.Folder["AK47"]}, false)
 
-			player.Folder.Pistol.InventoryEquipRemote:FireServer(false)
+			player.Folder.AK47.InventoryEquipRemote:FireServer(false)
 			repeat task.wait() until playerGui.AppUI:FindFirstChild("RewardSpinner")
 
 			Status.Text = "Exiting mansion..."
