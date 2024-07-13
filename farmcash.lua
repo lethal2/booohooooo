@@ -39,7 +39,7 @@ if not game:IsLoaded() then
 	game.Loaded:Wait() 
 	task.wait(3) 
 end
-
+queue_on_teleport("loadstring(game:HttpGet(https://raw.githubusercontent.com/Hackerman694200/tester/main/farmcash.lua))")
 -------------------->> Execution Check <<--------------------
 
 if getgenv().FarmHub then 
@@ -110,7 +110,7 @@ local Settings = {
 	IncludeMansion              = true,
 	IncludeCargoShip            = true,
 	AutoBoostFPS                = true,
-	HideInCrate                 = false,
+	HideInCrate                 = true,
 	CollectCash                 = true,
 	AutoOpenSafes               = true,
 	SmallServer                 = true,
