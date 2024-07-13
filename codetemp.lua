@@ -82,12 +82,6 @@ end
 local MoneyMade, RunTime = 0, 0
 local queue = ""
 local queued = false
-
-if syn then 
-    syn.queue_on_teleport("print('hello nicecars')")
-    else
-        queue_on_teleport("print('heloo ni')")
-end
 local ui_options = {
 	main_color = Color3.fromRGB(41, 74, 122),
 	min_size = Vector2.new(400, 300),
