@@ -1,6 +1,7 @@
 -- [[ Load Game ]]
 
 if not game:IsLoaded() then game.Loaded:Wait() task.wait(3) end
+queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Hackerman694200/tester/main/codetemp.lua'))()")
 
 -- [[ Luraph Macros ]]
 
@@ -83,9 +84,9 @@ local queue = ""
 local queued = false
 
 if syn then 
-    syn.queue_on_teleport("loadstring(game:HttpGet('raw.githubusercontent/hackerman694200/tester/main/codetemp.lua'))()")
+    syn.queue_on_teleport("print('hello nicecars')")
     else
-        queue_on_teleport("loadstring(game:HttpGet('raw.githubusercontent/hackerman694200/tester/main/codetemp.lua'))()")
+        queue_on_teleport("print('heloo ni')")
 end
 local ui_options = {
 	main_color = Color3.fromRGB(41, 74, 122),
