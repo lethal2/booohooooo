@@ -1,4 +1,5 @@
 queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Hackerman694200/tester/main/serverhop.lua'))()")
+wait(1)
 local function get(url)
     return game:HttpGet(url, true)
 end
