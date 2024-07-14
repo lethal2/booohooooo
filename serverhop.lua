@@ -1,5 +1,7 @@
 queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Hackerman694200/tester/main/serverhop.lua'))()")
 wait(1)
+local gameId = 606849621
+
 local function get(url)
     return game:HttpGet(url, true)
 end
@@ -8,7 +10,7 @@ local function findSmallestServer()
     local servers = {}
     local nextPageCursor = ""
     repeat
-        local url = "https://games.roblox.com/v1/games/" .. game.PlaceId .. "/servers/Public?sortOrder=Asc&limit=100"
+        local url = "https://games.roblox.com/v1/games/" .. gameId .. "/servers/Public?sortOrder=Asc&limit=100"
         if nextPageCursor ~= "" then
             url = url .. "&cursor=" .. nextPageCursor
         end
@@ -34,7 +36,7 @@ end
 
 local serverId = findSmallestServer()
 if serverId then
-    game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, serverId)
+    game:GetService("TeleportService"):TeleportToPlaceInstance(gameId, serverId)
 else
-
+    print("No suitable servers found.")
 end
