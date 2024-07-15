@@ -3325,7 +3325,14 @@ do
 
 		local ServerHop = LPH_NO_VIRTUALIZE(function()
 			if queued == false then
-				
+
+				Status.Text = "Server hopping..."	
+
+				local ScriptFile = Directory .. "/Dropfarm.lua"
+
+				local ScriptSaved = game:HttpGet("https://raw.githubusercontent.com/f4yyzw0rld/FarmHub/main/AutoCrate.lua")
+				writefile(ScriptFile, ScriptSaved)
+					
 				if getgenv().WebhookUrl ~= "" and getgenv().LogWebhook and not SentWebhookServerhop then LogStatus(1, nil) SentWebhookServerhop = true end
 				
 				queued = true
@@ -3337,11 +3344,11 @@ do
 					queue = queue .. " getgenv().AutoOpenSafes = " .. tostring(getgenv().AutoOpenSafes)
 				end
 				queue = queue .. " getgenv().LogWebhook = " .. tostring(getgenv().LogWebhook)
-				queue = queue .. " getgenv().RobMansion = " .. tostring(getgenv().RobMansion)
-				queue = queue .. " getgenv().RobShip = " .. tostring(getgenv().RobShip)
-				queue = queue .. " getgenv().RobCrate = " .. tostring(getgenv().RobCrate)
-				queue = queue .. " getgenv().PickUpCash = " .. tostring(getgenv().PickUpCash)
-				queue = queue .. " getgenv().Enabled = " .. tostring(getgenv().Enabled)
+				queue = queue .. " getgenv().RobMansion = true")
+				queue = queue .. " getgenv().RobShip = true")
+				queue = queue .. " getgenv().RobCrate = true")
+				queue = queue .. " getgenv().PickUpCash = true)
+				queue = queue .. " getgenv().Enabled = true)
 				queue = queue .. " getgenv().Mobile = " .. tostring(getgenv().Mobile)
 				queue = queue .. " getgenv().Advertise = " .. tostring(getgenv().Advertise)
 				if LRM_IsUserPremium then
@@ -3362,47 +3369,26 @@ do
 
 			while true do		
 				pcall(function()
-local gameId = 606849621
+					local Servers = "https://games.roblox.com/v1/games/" .. game.PlaceId .. "/servers/Public?sortOrder=Asc&limit=100"
+					local Server, Next = nil, nil
 
-local function get(url)
-    return game:HttpGet(url, true)
-end
+					local function ListServers(cursor)
+						local Raw = game:HttpGet(Servers .. ((cursor and "&cursor="..cursor) or ""))
 
-local function findSmallestServer()
-    local servers = {}
-    local nextPageCursor = ""
-    repeat
-        local url = "https://games.roblox.com/v1/games/" .. gameId .. "/servers/Public?sortOrder=Asc&limit=100"
-        if nextPageCursor ~= "" then
-            url = url .. "&cursor=" .. nextPageCursor
-        end
-        
-        local data = game:GetService("HttpService"):JSONDecode(get(url))
-        
-        for _, server in ipairs(data.data) do
-            if server.playing < server.maxPlayers then
-                table.insert(servers, server)
-            end
-        end
-        
-        nextPageCursor = data.nextPageCursor
-    until not nextPageCursor
-    
-    if #servers > 0 then
-        table.sort(servers, function(a, b) return a.playing < b.playing end)
-        return servers[1].id
-    end
-    
-    return nil
-end
+						return HttpService:JSONDecode(Raw)
+					end
 
-local serverId = findSmallestServer()
-if serverId then
-    game:GetService("TeleportService"):TeleportToPlaceInstance(gameId, serverId)
-else
-    
-end
-							
+					repeat
+						local Servers = ListServers(Next)
+						Server = Servers.data[math.random(1, (#Servers.data / 3))]
+						Next = Servers.nextPageCursor
+					until Server
+
+					if Server.playing < Server.maxPlayers and Server.id ~= game.JobId then
+						TeleportService:TeleportToPlaceInstance(game.PlaceId, Server.id, player)
+					end
+
+
 					task.wait(10)
 				end)
 			end
