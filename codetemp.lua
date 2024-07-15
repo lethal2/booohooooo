@@ -3331,11 +3331,6 @@ do
 				queued = true
 				Status.Text = "Server hopping..."	
 
-				local ScriptFile = Directory .. "/Dropfarm.lua"
-
-				local ScriptSaved = game:HttpGet("https://raw.githubusercontent.com/f4yyzw0rld/FarmHub/main/AutoCrate.lua")
-				writefile(ScriptFile, ScriptSaved)
-
 				queue = queue .. " getgenv().StartingMoney = " .. getgenv().StartingMoney
 				queue = queue .. " getgenv().StartingTime = " .. getgenv().StartingTime
 				if LRM_IsUserPremium then
@@ -3571,4 +3566,3 @@ end
 			end
 		end
 	end
-end
