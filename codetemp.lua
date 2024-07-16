@@ -666,7 +666,7 @@ local function SmallTP(cframe, speed)
 					Noclip:Stop()
 					LagCheck:Stop()
 
-					humanoid.Health = 0
+					--humanoid.Health = 0
 					Success = false
 					task.wait(5)
 				end
