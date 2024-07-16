@@ -7,7 +7,14 @@ queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Ha
 
 
 -- [[ Settings + Stats ]]
-
+getfenv().LPH_JIT           = function(...) return ... end
+getfenv().LPH_CRASH         = function() return print(debug.traceback()) end
+getfenv().LPH_ENCSTR        = function(...) return ... end
+getfenv().LPH_JIT_MAX       = function(...) return ... end
+getfenv().LPH_HOOK_FIX      = function(...) return ... end
+getfenv().LPH_JIT_ULTRA     = function(...) return ... end
+getfenv().LPH_NO_UPVALUES   = function(f) return(function(...) return f(...) end) end
+getfenv().LPH_NO_VIRTUALIZE = function(...) return ... end
 if getgenv().Enabled == nil then
 	getgenv().Enabled = true
 end
