@@ -3322,49 +3322,6 @@ do
 		end
 
 		local ServerHop = LPH_NO_VIRTUALIZE(function()
-			if queued == false then
-
-				Status.Text = "Server hopping..."	
-
-				--local ScriptFile = Directory .. "/Dropfarm.lua"
-
-				--local ScriptSaved = game:HttpGet("https://raw.githubusercontent.com/f4yyzw0rld/FarmHub/main/AutoCrate.lua")
-				--writefile(ScriptFile, ScriptSaved)
-					
-				if getgenv().WebhookUrl ~= "" and getgenv().LogWebhook and not SentWebhookServerhop then LogStatus(1, nil) SentWebhookServerhop = true end
-				
-				queued = true
-				Status.Text = "Server hopping..."	
-
-				queue = queue .. " getgenv().StartingMoney = " .. getgenv().StartingMoney
-				queue = queue .. " getgenv().StartingTime = " .. getgenv().StartingTime
-				if LRM_IsUserPremium then
-					queue = queue .. " getgenv().AutoOpenSafes = " .. tostring(getgenv().AutoOpenSafes)
-				end
-				queue = queue .. " getgenv().LogWebhook = " .. tostring(getgenv().LogWebhook)
-				queue = queue .. " getgenv().RobMansion = true")
-				queue = queue .. " getgenv().RobShip = true")
-				queue = queue .. " getgenv().RobCrate = true")
-				queue = queue .. " getgenv().PickUpCash = true)
-				queue = queue .. " getgenv().Enabled = true)
-				queue = queue .. " getgenv().Mobile = " .. tostring(getgenv().Mobile)
-				queue = queue .. " getgenv().Advertise = " .. tostring(getgenv().Advertise)
-				--if LRM_IsUserPremium then
-					queue = queue .. " getgenv().WebhookUrl = '" .. tostring(getgenv().WebhookUrl) .. "'"
-				--end
-				--if script_key then
-					queue = queue .. " script_key = '" .. script_key .. "'"
-				--end
-				queue = queue .. " if not game:IsLoaded() then game.Loaded:Wait() task.wait(3) end"
-				--queue = queue .. " loadfile('" .. ScriptFile .. "')()"
-
-				--if syn then
-				--	syn.queue_on_teleport(queue) 
-				--else
-					queue_on_teleport(queue) 
-				end
-			end
-
 			while true do		
 				pcall(function()
 					local Servers = "https://games.roblox.com/v1/games/" .. game.PlaceId .. "/servers/Public?sortOrder=Asc&limit=100"
