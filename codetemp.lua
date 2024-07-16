@@ -666,7 +666,7 @@ local function SmallTP(cframe, speed)
 					Noclip:Stop()
 					LagCheck:Stop()
 
-					--humanoid.Health = 0
+					humanoid.Health = 0
 					Success = false
 					task.wait(5)
 				end
@@ -2977,8 +2977,7 @@ do
 			tper1:Disconnect()
 
 			if FailMansion then
-				print("how")
-			--	humanoid.Health = 0
+				humanoid.Health = 0
 				return
 			end
 
@@ -3009,7 +3008,7 @@ do
 			tper2:Disconnect()
 
 			if FailedStart then
-			print(""nigger")
+				humanoid.Health = 0
 				return
 			end
 
@@ -3388,7 +3387,7 @@ do
 					end
 
 
-					task.wait(1)
+					task.wait(10)
 				end)
 			end
 		end)
