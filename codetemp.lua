@@ -2977,7 +2977,8 @@ do
 			tper1:Disconnect()
 
 			if FailMansion then
-				humanoid.Health = 0
+				print("how")
+			--	humanoid.Health = 0
 				return
 			end
 
@@ -3008,7 +3009,7 @@ do
 			tper2:Disconnect()
 
 			if FailedStart then
-				humanoid.Health = 0
+			print(""nigger")
 				return
 			end
 
