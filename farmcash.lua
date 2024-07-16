@@ -39,7 +39,7 @@ if not game:IsLoaded() then
 	game.Loaded:Wait() 
 	task.wait(3) 
 end
-queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Hackerman694200/tester/main/farmcash.lua'))()")
+queue_on_teleport("loadstring(game:HttpGet('https://github.com/lethal2/booohooooo/blob/main/farmcash.lua'))()")
 -------------------->> Execution Check <<--------------------
 
 if getgenv().FarmHub then 
