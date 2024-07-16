@@ -4,14 +4,12 @@ if not game:IsLoaded() then game.Loaded:Wait() task.wait(3) end
 -- dumbass put queue on teleport
 
 -- [[ Luraph Macros ]]
-getfenv().LPH_JIT           = function(...) return ... end
-getfenv().LPH_CRASH         = function() return print(debug.traceback()) end
-getfenv().LPH_ENCSTR        = function(...) return ... end
-getfenv().LPH_JIT_MAX       = function(...) return ... end
-getfenv().LPH_HOOK_FIX      = function(...) return ... end
-getfenv().LPH_JIT_ULTRA     = function(...) return ... end
-getfenv().LPH_NO_UPVALUES   = function(f) return(function(...) return f(...) end) end
-getfenv().LPH_NO_VIRTUALIZE = function(...) return ... end
+if not LPH_OBFUSCATED then
+	LPH_JIT_MAX = function(...) return(...) end;
+	LPH_NO_VIRTUALIZE = function(...) return(...) end;
+    LRM_IsUserPremium = true;
+	script_key = "a"
+end
 
 -- [[ Settings + Stats ]]
 if getgenv().Enabled == nil then
