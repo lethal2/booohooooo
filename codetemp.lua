@@ -1,7 +1,7 @@
 -- [[ Load Game ]]
 
 if not game:IsLoaded() then game.Loaded:Wait() task.wait(3) end
-queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Hackerman694200/tester/main/codetemp.lua'))()")
+queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Hackerman694200/tester/main/codetemp.lua'))()
 
 -- [[ Luraph Macros ]]
 
