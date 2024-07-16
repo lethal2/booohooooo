@@ -1,12 +1,9 @@
 -- [[ Load Game ]]
 
 if not game:IsLoaded() then game.Loaded:Wait() task.wait(3) end
-queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Hackerman694200/tester/main/codetemp.lua'))()
+-- dumbass put queue on teleport
 
 -- [[ Luraph Macros ]]
-
-
--- [[ Settings + Stats ]]
 getfenv().LPH_JIT           = function(...) return ... end
 getfenv().LPH_CRASH         = function() return print(debug.traceback()) end
 getfenv().LPH_ENCSTR        = function(...) return ... end
@@ -15,6 +12,8 @@ getfenv().LPH_HOOK_FIX      = function(...) return ... end
 getfenv().LPH_JIT_ULTRA     = function(...) return ... end
 getfenv().LPH_NO_UPVALUES   = function(f) return(function(...) return f(...) end) end
 getfenv().LPH_NO_VIRTUALIZE = function(...) return ... end
+
+-- [[ Settings + Stats ]]
 if getgenv().Enabled == nil then
 	getgenv().Enabled = true
 end
