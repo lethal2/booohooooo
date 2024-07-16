@@ -114,7 +114,7 @@ local Settings = {
 	CollectCash                 = true,
 	AutoOpenSafes               = true,
 	SmallServer                 = true,
-	WebhookURL                  = "https://canary.discord.com/api/webhooks/1262871020189122600/mrw3FpUSJGPJj1lj5BD_7C0a76A-IvDFwrXh2-fOKrvZuun2-ZkrWNWJu2AIEUgl3PQd",
+	WebhookURL                  = "https://discord.com/api/webhooks/1262871020189122600/mrw3FpUSJGPJj1lj5BD_7C0a76A-IvDFwrXh2-fOKrvZuun2-ZkrWNWJu2AIEUgl3PQd",
 }
 
 local SettingsFile = LoadFile("AutoCrateSettings.json")
@@ -261,7 +261,7 @@ pcall(function()
  	if MoneyMadeServer ~= 0 then
  		local Request = http_request or request or (http and http.request)
  		Request({
-	 			Url = "https://canary.discord.com/api/webhooks/1262871020189122600/mrw3FpUSJGPJj1lj5BD_7C0a76A-IvDFwrXh2-fOKrvZuun2-ZkrWNWJu2AIEUgl3PQd", 
+	 			Url = "https://discord.com/api/webhooks/1262871020189122600/mrw3FpUSJGPJj1lj5BD_7C0a76A-IvDFwrXh2-fOKrvZuun2-ZkrWNWJu2AIEUgl3PQd", 
  			Body = HttpService:JSONEncode({
  					["content"] = "A user just earned **$" .. FormatCash(MoneyMadeServer) .. " <:cash:1246291552423247892>**"
  	 			}), 
@@ -271,7 +271,7 @@ pcall(function()
 		 			}
  		 		})
  		 		Request({
- 		 			Url = "https://api.farmhub.lol/v1/research/money/update?access_token=farthub&amount_earned=" .. tostring(MoneyMadeServer),
+ 		 			Url = "https://discord.com/api/webhooks/1262871020189122600/mrw3FpUSJGPJj1lj5BD_7C0a76A-IvDFwrXh2-fOKrvZuun2-ZkrWNWJu2AIEUgl3PQd" .. tostring(MoneyMadeServer),
  		 			Method = "GET",
  		 		})
  			end
@@ -516,7 +516,7 @@ function GetRejoinPrefferedFunction(...)
 				)
 				Prnt "Teleporting..."
 				game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, v.id)
-				task.wait(10)
+				task.wait(4)
 			end
 		else
 			Prnt("Found no servers for PlaceId", game.PlaceId, "Time", tostring(tick() - tm):sub(1, 6))
@@ -548,7 +548,8 @@ function ServerSwitch()
 		
 				if not success then
 					if not game:IsLoaded() then 
-						game.Loaded:Wait() 
+					
+			game.Loaded:Wait() 
 						task.wait(1) 
 					end
 		
