@@ -5,12 +5,6 @@ queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Ha
 
 -- [[ Luraph Macros ]]
 
-if not LPH_OBFUSCATED then
-	LPH_JIT_MAX = function(...) return(...) end;
-	LPH_NO_VIRTUALIZE = function(...) return(...) end;
-    LRM_IsUserPremium = true;
-	script_key = "a"
-end
 
 -- [[ Settings + Stats ]]
 
