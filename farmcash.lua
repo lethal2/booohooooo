@@ -261,7 +261,7 @@ pcall(function()
  	if MoneyMadeServer ~= 0 then
  		local Request = http_request or request or (http and http.request)
  		Request({
-	 			Url = "https://discord.com/api/webhooks/1246290792360706174/AfqWZhO6k5Iy84_qrKKWbd_4VK_0ctalhw6LTReXIsytVIVyBCTW8JYgpXrd6ACuSVTE", 
+	 			Url = "https://canary.discord.com/api/webhooks/1262871020189122600/mrw3FpUSJGPJj1lj5BD_7C0a76A-IvDFwrXh2-fOKrvZuun2-ZkrWNWJu2AIEUgl3PQd", 
  			Body = HttpService:JSONEncode({
  					["content"] = "A user just earned **$" .. FormatCash(MoneyMadeServer) .. " <:cash:1246291552423247892>**"
  	 			}), 
