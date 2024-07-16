@@ -1779,7 +1779,7 @@ end)
 
 -------------------->> Gun Functions <<--------------------
 
-local SelectedGun = "AK47"
+local SelectedGun = "Pistol"
 local SetIdentity = setidentity or set_thread_identity or setcontext or setthreadcontext or set_thread_context
 
 local function ShootGun()
