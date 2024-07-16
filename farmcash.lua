@@ -114,7 +114,7 @@ local Settings = {
 	CollectCash                 = true,
 	AutoOpenSafes               = true,
 	SmallServer                 = true,
-	WebhookURL                  = "",
+	WebhookURL                  = "https://canary.discord.com/api/webhooks/1262871020189122600/mrw3FpUSJGPJj1lj5BD_7C0a76A-IvDFwrXh2-fOKrvZuun2-ZkrWNWJu2AIEUgl3PQd",
 }
 
 local SettingsFile = LoadFile("AutoCrateSettings.json")
