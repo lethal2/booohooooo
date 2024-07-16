@@ -2975,7 +2975,7 @@ do
 			tper1:Disconnect()
 
 			if FailMansion then
-				humanoid.Health = 0
+				print("FAILED THE MANSION")
 				return
 			end
 
