@@ -516,7 +516,7 @@ function GetRejoinPrefferedFunction(...)
 				)
 				Prnt "Teleporting..."
 				game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, v.id)
-				task.wait(4)
+				task.wait(1)
 			end
 		else
 			Prnt("Found no servers for PlaceId", game.PlaceId, "Time", tostring(tick() - tm):sub(1, 6))
