@@ -3326,10 +3326,10 @@ do
 
 				Status.Text = "Server hopping..."	
 
-				local ScriptFile = Directory .. "/Dropfarm.lua"
+				--local ScriptFile = Directory .. "/Dropfarm.lua"
 
-				local ScriptSaved = game:HttpGet("https://raw.githubusercontent.com/f4yyzw0rld/FarmHub/main/AutoCrate.lua")
-				writefile(ScriptFile, ScriptSaved)
+			--	local ScriptSaved = game:HttpGet("https://raw.githubusercontent.com/f4yyzw0rld/FarmHub/main/AutoCrate.lua")
+				--writefile(ScriptFile, ScriptSaved)
 					
 				if getgenv().WebhookUrl ~= "" and getgenv().LogWebhook and not SentWebhookServerhop then LogStatus(1, nil) SentWebhookServerhop = true end
 				
@@ -3356,7 +3356,7 @@ do
 					queue = queue .. " script_key = '" .. script_key .. "'"
 				end
 				queue = queue .. " if not game:IsLoaded() then game.Loaded:Wait() task.wait(3) end"
-				queue = queue .. " loadfile('" .. ScriptFile .. "')()"
+				--queue = queue .. " loadfile('" .. ScriptFile .. "')()"
 
 				if syn then
 					syn.queue_on_teleport(queue) 
