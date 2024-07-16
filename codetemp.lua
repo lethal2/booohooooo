@@ -3387,7 +3387,7 @@ do
 					end
 
 
-					task.wait(10)
+					task.wait(4)
 				end)
 			end
 		end)
