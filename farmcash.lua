@@ -24,7 +24,6 @@ if not LPH_OBFUSCATED then
 	LRM_TotalExecutions         = 0
 
 	getfenv().LPH_JIT           = function(...) return ... end
-	getfenv().LPH_CRASH         = function() return print(debug.traceback()) end
 	getfenv().LPH_ENCSTR        = function(...) return ... end
 	getfenv().LPH_JIT_MAX       = function(...) return ... end
 	getfenv().LPH_HOOK_FIX      = function(...) return ... end
