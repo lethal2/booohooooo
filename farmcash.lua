@@ -595,7 +595,7 @@ task.delay(10, function()
 			})
 		end)
 		task.wait(2)
-		task.delay(5, function()
+		task.delay(2, function()
 			Humanoid.Health = 0
 		end)
 		ServerSwitch()
@@ -2215,7 +2215,7 @@ task.spawn(function()
 		end)
 		if IsArrested() then
 			SetStatus("Your arrested, switching servers..")
-			task.delay(5, function()
+			task.delay(2, function()
 				Humanoid.Health = 0
 			end)
 			ServerSwitch()
@@ -2348,7 +2348,7 @@ local function FixCoreGui()
 	game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(child)
 		if child.Name == "ErrorPrompt" and child:FindFirstChild("MessageArea") and child.MessageArea:FindFirstChild("ErrorFrame") then
 			SetStatus("Client kicked, switching servers..")
-			task.delay(5, function()
+			task.delay(2, function()
 				Humanoid.Health = 0
 			end)
 			ServerSwitch()
@@ -2366,7 +2366,7 @@ end)
 task.spawn(function()
 	while task.wait(300) do
 		SetStatus("Timed out, switching servers..")
-		task.delay(5, function()
+		task.delay(2, function()
 			Humanoid.Health = 0
 		end)
 		ServerSwitch()
