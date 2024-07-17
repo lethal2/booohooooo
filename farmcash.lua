@@ -233,7 +233,7 @@ local MadeBefore = Leaderstats:WaitForChild("Money").Value
 	if not Queued then
 	Queued = true
 local ScriptFile = GetDirectory() .. "/AutoCrateLoader.lua"
-	local ScriptSaved = game:HttpGet("https://raw.githubusercontent.com/Hackerman694200/tester/main/farmcash")
+	local ScriptSaved = game:HttpGet("https://raw.githubusercontent.com/lethal2/booohooooo/main/farmcash.lua")
 	SaveFile(tostring(ScriptFile), ScriptSaved)
 	SaveFile("AutoCrateSettings.json", HttpService:JSONEncode(Settings))
 	local Queue = [[getgenv().StartingMoney = ]] .. getgenv().StartingMoney .. [[
@@ -247,7 +247,7 @@ local ScriptFile = GetDirectory() .. "/AutoCrateLoader.lua"
  					game.Loaded:Wait() 
  					task.wait(1) 
  				end
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/Hackerman694200/tester/main/farmcash"))()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/lethal2/booohooooo/main/farmcash.lua"))()
  			end
  		]]
 queue_on_teleport(Queue)
@@ -552,7 +552,7 @@ function ServerSwitch()
 						task.wait(1) 
 					end
 		
-					loadstring(game:HttpGet("https://farmhub.lol/AutoCrate.lua"))()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/lethal2/booohooooo/main/farmcash.lua"))()
 				end
 			]]
 		else
