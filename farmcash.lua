@@ -2,13 +2,6 @@
 
 if not LPH_OBFUSCATED then
 	script_key                  = "mCmIgbiDYBXSQGtBwuMqIdvjOofcXUbW"
-	LRM_UserNote                = "Not specified"
-	LRM_ScriptName              = "Auto Crate"
-	LRM_SecondsLeft             = math.huge
-	LRM_IsUserPremium           = true
-	LRM_LinkedDiscordID         = "855840079376285727"
-	LRM_TotalExecutions         = 0
-
 	getfenv().LPH_JIT           = function(...) return ... end
 	getfenv().LPH_ENCSTR        = function(...) return ... end
 	getfenv().LPH_JIT_MAX       = function(...) return ... end
